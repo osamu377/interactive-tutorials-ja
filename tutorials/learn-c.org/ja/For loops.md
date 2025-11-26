@@ -1,5 +1,5 @@
-Tutorial
---------
+チュートリアル
+-------------
 
 For loops in C are straightforward. They supply the ability to create a loop - a code block that runs multiple times. 
 For loops require an iterator variable, usually notated as `i`.
@@ -33,13 +33,13 @@ the iterator `i` as the array index:
     /* sum now contains a[0] + a[1] + ... + a[9] */
     printf("Sum of the array is %d\n", sum);
 
-Exercise
---------
+演習
+----
 
 Calculate the factorial (multiplication of all items `array[0]` to `array[9]`, inclusive), of the variable `array`.
 
-Tutorial Code
--------------
+チュートリアル コード
+-------------------
 
     #include <stdio.h>
 
@@ -53,13 +53,13 @@ Tutorial Code
       printf("10! is %d.\n", factorial);
     }
 
-Expected Output
+期待している出力
 ---------------
 
     10! is 3628800.
 
-Solution
---------
+解答
+----
 
     #include <stdio.h>
 

@@ -1,5 +1,5 @@
-Tutorial
---------
+チュートリアル
+-------------
 
 ### Defining strings
 
@@ -69,14 +69,14 @@ The arguments passed are destination string, source string, and n - maximum numb
     strncat(dest,src,20);
     printf("%s\n",dest);
 
-Exercise
---------
+演習
+----
 
 Define the string `first_name` with the value `John` using the pointer notation, and define the string `last_name` with the value `Doe`
 using the local array notation.
 
-Tutorial Code
--------------
+チュートリアル コード
+-------------------
 
     #include <stdio.h>
     #include <string.h>
@@ -98,14 +98,14 @@ Tutorial Code
     }
 
 
-Expected Output
+期待している出力
 ---------------
 
     Done!
     JohnBoe
 
-Solution
---------
+解答
+----
 
     #include <stdio.h>
     #include <string.h>

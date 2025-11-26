@@ -1,5 +1,5 @@
-Tutorial
---------
+チュートリアル
+-------------
 
 C structures are special, large variables which contain several named variables inside. Structures are the basic foundation for objects and classes in C. Structures are used for:
 
@@ -57,13 +57,13 @@ Since brand is a char pointer, the vehicle type can contain a string (which, in 
     mycar.brand = "Ford";
     mycar.model = 2007;
 
-Exercise
---------
+演習
+----
 
 Define a new data structure, named "person", which contains a string (pointer to char) called `name`, and an integer called `age`.
 
-Tutorial Code
--------------
+チュートリアル コード
+-------------------
 
     #include <stdio.h>
 
@@ -78,13 +78,13 @@ Tutorial Code
         printf("%s is %d years old.", john.name, john.age);
     }
 
-Expected Output
+期待している出力
 ---------------
 
     John is 27 years old.
 
-Solution
---------
+解答
+----
 
     #include <stdio.h>
 

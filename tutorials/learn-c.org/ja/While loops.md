@@ -1,5 +1,5 @@
-Tutorial
---------
+チュートリアル
+-------------
 
 While loops are similar to for loops, but have less functionality. A while loop continues executing the while block as long as the
 condition in the while remains true. For example, the following code will execute exactly ten times:
@@ -45,8 +45,8 @@ In the following code, the `continue` directive causes the `printf` command to b
         printf("The number %d is even.\n", n);
     }
 
-Exercise
---------
+演習
+----
 
 The `array` variable consists of a sequence of ten numbers. Inside the while loop, you must write two `if` conditions, 
 which change the flow of the loop in the following manner (without changing the `printf` command):
@@ -56,8 +56,8 @@ which change the flow of the loop in the following manner (without changing the 
 
 Notice that if you do not advance the iterator variable `i` and use the `continue` derivative, you will get stuck in an infinite loop.
 
-Tutorial Code
--------------
+チュートリアル コード
+-------------------
 
     #include <stdio.h>
 
@@ -75,7 +75,7 @@ Tutorial Code
         return 0;
     }
 
-Expected Output
+期待している出力
 ---------------
 
     7
@@ -83,8 +83,8 @@ Expected Output
     9
     5
 
-Solution
---------
+解答
+----
 
     #include <stdio.h>
 

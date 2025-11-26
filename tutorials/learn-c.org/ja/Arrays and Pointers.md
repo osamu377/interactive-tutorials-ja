@@ -1,5 +1,5 @@
-Tutorial
---------
+チュートリアル
+-------------
 
 In a previous tutorial on [[Pointers]], you learned that a pointer to a given data type can store the address of any variable of that particular data type. For example, in the following code, the pointer variable `pc` stores the address of the character variable `c`.
 
@@ -124,8 +124,8 @@ We conclude this tutorial by looking at dynamic memory allocation for a two-dime
     free(pvowels);
 
 
-Exercise
---------
+演習
+----
 
 The first seven rows of [Pascal's triangle](http://mathworld.wolfram.com/PascalsTriangle.html) are shown below. Note that row *i* contains *i* elements. Therefore, to store the numbers from the first three rows, one would require 1 + 2 + 3 = 6 memory slots.
 
@@ -146,8 +146,8 @@ The first seven rows of [Pascal's triangle](http://mathworld.wolfram.com/Pascals
 Complete the skeleton code given below to store the numbers from the first three rows of Pascal's triangle in a two-dimensional &quot;array&quot; using dynamic memory allocation. Note that you must allocate exactly six memory slots to store those six numbers. No extra memory should be allocated. At the end of your program, free all the memory blocks used in this program.
 
 
-Tutorial Code
--------------
+チュートリアル コード
+-------------------
 
     #include <stdio.h>
     #include <stdlib.h>
@@ -185,15 +185,15 @@ Tutorial Code
       return 0;
     }
 
-Expected Output
+期待している出力
 ---------------
 
     1
     11
     121
 
-Solution
---------
+解答
+----
 
     #include <stdio.h>
     #include <stdlib.h>

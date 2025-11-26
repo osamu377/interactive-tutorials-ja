@@ -1,5 +1,5 @@
-Tutorial
---------
+チュートリアル
+-------------
 
 Remember pointers? We used them to point to an array of chars then make a string out of them.
 Then things got more interesting when we learned how to control these pointers.
@@ -75,12 +75,12 @@ Let's remember again. Why do we use function pointers?
 1. To allow programmers to use libraries for different usages -> "Flexibility"
 
 
-Exercise
---------
+演習
+----
 Complete the array of pointers to functions and call each function using its pointer from the array. Array of pointers to functions? Yes you can do that!
 
-Tutorial Code
--------------
+チュートリアル コード
+-------------------
 
     #include <stdio.h>
 
@@ -119,15 +119,15 @@ Tutorial Code
     }
 
 
-Expected Output
+期待している出力
 ---------------
 
     this is f1 and var is: 0
     this is f2 and var is: 1
     this is f3 and var is: 2
 
-Solution
---------
+解答
+----
 
     #include <stdio.h>
 

@@ -1,5 +1,5 @@
-Tutorial
---------
+チュートリアル
+-------------
 
 Bit masking is simply the process of storing data truly as bits, as opposed to storing it as chars/ints/floats.  It is incredibly useful for storing certain types of data compactly and efficiently.
 
@@ -84,14 +84,14 @@ bit = storage & (1 << n);
 00000000    00001000
 ```
 
-Exercise
---------
+演習
+----
 
 Use bit masks to manipulate some flags.
 
 
-Tutorial Code
--------------
+チュートリアル コード
+-------------------
     #include <stdio.h>
     #include <assert.h>
 
@@ -129,12 +129,12 @@ Tutorial Code
     }
 
 
-Expected Output
+期待している出力
 ---------------
    Done!
 
-Solution
---------
+解答
+----
     #include <stdio.h>
     #include <assert.h>
 

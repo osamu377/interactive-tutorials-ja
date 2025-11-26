@@ -1,5 +1,5 @@
-Tutorial
---------
+チュートリアル
+-------------
 
 Dynamic allocation of memory is a very important subject in C. It allows building complex data structures such as linked lists. Allocating memory dynamically helps us to store data without initially knowing the size of the data in the time we wrote the program.
 
@@ -33,13 +33,13 @@ After we are done using the dynamically allocated struct, we can release it usin
 
 Note that the free does not delete the `myperson` variable itself, it simply releases the data that it points to. The `myperson` variable will still point to somewhere in the memory - but after calling `free(myperson)` we are not allowed to access that area anymore. We must not use that pointer again until we allocate new data using it.
 
-Exercise
---------
+演習
+----
 
 Use `malloc` to dynamically allocate a point structure.
 
-Tutorial Code
--------------
+チュートリアル コード
+-------------------
 
     #include <stdio.h>
     #include <stdlib.h>
@@ -63,13 +63,13 @@ Tutorial Code
       return 0;
     }
 
-Expected Output
+期待している出力
 ---------------
 
     mypoint coordinates: 10, 5
 
-Solution
---------
+解答
+----
 
     #include <stdio.h>
     #include <stdlib.h>

@@ -1,5 +1,5 @@
-Tutorial
---------
+チュートリアル
+-------------
 You previously learned what is a pointer and how to manipulate pointers. In this tutorial you will be learning the arithmetic operations on pointers.
 There are multiple arithmetic operations that can be applied on C pointers: ++, --, -, +
 
@@ -109,12 +109,12 @@ again the address is shifted by blocks of 4bytes (in case of int).
 ### Other Operations
 There are more operations such as comparison >, <, ==. The idea is very similar of comparing variables, but in this case we are comparing memory address.
 
-Exercise
---------
+演習
+----
 Copy last three addresses of intarray into parray which is an array of pointers to an int.
 
-Tutorial Code
--------------
+チュートリアル コード
+-------------------
     #include <stdio.h>
 	
     int main() {
@@ -145,14 +145,14 @@ Tutorial Code
     }
 
 
-Expected Output
+期待している出力
 ---------------
     Matched!
     Matched!
     Matched!
 
-Solution
---------
+解答
+----
         #include <stdio.h>
 
         int main() {

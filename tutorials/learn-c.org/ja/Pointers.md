@@ -1,5 +1,5 @@
-Tutorial
---------
+チュートリアル
+-------------
 
 Pointers are also variables and play a very important role in C programming language. They are used for several reasons, such as:
 
@@ -67,13 +67,13 @@ We then referred to it using the dereferencing operator. We can also change the 
     /* will print out 3 */
     printf("The value of a is now %d\n", a);
 
-Exercise
---------
+演習
+----
 
 Create a pointer to the local variable `n` called `pointer_to_n`, and use it to increase the value of `n` by one.
 
-Tutorial Code
--------------
+チュートリアル コード
+-------------------
 
     #include <stdio.h>
 
@@ -90,13 +90,13 @@ Tutorial Code
       return 0;
     }
 
-Expected Output
+期待している出力
 ---------------
 
     Done!
 
-Solution
---------
+解答
+----
 
     #include <stdio.h>
 

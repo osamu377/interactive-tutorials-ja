@@ -1,5 +1,5 @@
-Tutorial
---------
+チュートリアル
+-------------
 
 ### Introduction
 
@@ -14,16 +14,16 @@ A Binary Tree is a type of data structure in which each node has at most two chi
 The operations performed on trees requires searching in one of two main ways: Depth First Search and Breadth-first search. **Depth-first search (DFS)** is an algorithm for traversing or searching tree or graph data structures. One starts at the root and explores as far as possible along each branch before backtracking. There are three types of depth first search traversal: **pre-order** visit, left, right, **in-order** left, visit, right, **post-order** left, right, visit. **Breadth-first search (BFS)** is an algorithm for traversing or searching tree or graph structures. In level-order, where we visit every node on a level before going to a lower level.<br>
 
 
-Exercise
---------
+演習
+----
 
 Below is an implementation of a binary tree that has insertion and printing capabilities. This tree is ordered but not balanced. This example maintains its ordering at insertion time.
 
 Change the print routine to depth-first search **pre-order**.
 
 
-Tutorial Code
--------------
+チュートリアル コード
+-------------------
 
     #include <stdio.h>
     #include <stdlib.h>
@@ -114,13 +114,13 @@ Tutorial Code
     }
 
 
-Expected Output
+期待している出力
 ---------------
 
     5 4 3 8
 
-Solution
---------
+解答
+----
 
     #include <stdio.h>
     #include <stdlib.h>

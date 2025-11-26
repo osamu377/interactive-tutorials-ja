@@ -1,5 +1,5 @@
-Tutorial
---------
+チュートリアル
+-------------
  
 Recursion occurs when a function contains within it a call to itself. Recursion can result in very neat, elegant code that is intuitive to follow. It can also result in a very large amount of memory being used if the recursion gets too deep.
  
@@ -36,13 +36,13 @@ For example, this function will perform multiplication by recursively adding :
         return 0;
     }
  
-Exercise
---------
+演習
+----
  
 Define a new function called `factorial()` that will compute the factorial by recursive multiplication (5! = 5 x 4 x 3 x 2 x 1). Note that by convention, the factorial of 0 is equal to 1 (0! = 1).
  
-Tutorial Code
--------------
+チュートリアル コード
+-------------------
 
     #include <stdio.h>
 
@@ -56,7 +56,7 @@ Tutorial Code
     
     /* define your function here (don't forget to declare it) */
 
-Expected Output
+期待している出力
 ---------------
 
     0! = 1
@@ -64,8 +64,8 @@ Expected Output
     3! = 6
     5! = 120
 
-Solution
---------
+解答
+----
 
     #include <stdio.h>
 

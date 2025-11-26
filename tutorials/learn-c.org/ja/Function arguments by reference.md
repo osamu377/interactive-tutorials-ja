@@ -1,5 +1,5 @@
-Tutorial
---------
+チュートリアル
+-------------
 
 Assuming you now understand pointers and functions, you are aware that function arguments are passed by value, by which means they are copied in and out of functions.
 But what if we pass pointers to values instead of the values themselves? This will allow us to give functions control over the variables and structures of the parent functions and not just a copy of them, thus directly reading and writing the original object.
@@ -48,13 +48,13 @@ However, if we wish to dereference a structure and access one of it's internal m
         p->y++;
     }
 
-Exercise
---------
+演習
+----
 
 Write a function called `birthday`, which adds one to the `age` of a `person`.
 
-Tutorial Code
--------------
+チュートリアル コード
+-------------------
 
     #include <stdio.h>
 
@@ -80,14 +80,14 @@ Tutorial Code
       return 0;
     }
 
-Expected Output
+期待している出力
 ---------------
 
     John is 27 years old.
     Happy birthday! John is now 28 years old.
 
-Solution
---------
+解答
+----
 
     #include <stdio.h>
 

@@ -1,5 +1,5 @@
-Tutorial
---------
+チュートリアル
+-------------
 
 ### Decision Making
 
@@ -99,15 +99,15 @@ The NOT operator `!` can also be used likewise:
     }
 
 
-Exercise
---------
+演習
+----
 
 In this exercise, you must construct an `if` statement inside the `guessNumber` function statement that checks if the number `guess` is equal to 555. If that is the case, the function must print out using `printf` "Correct. You guessed it!". If `guess` is less than 555, the function must print out using `printf` "Your guess is too low." If `guess` is greater than 555, the function must print out using `printf` "Your guess is too high."
 
 * **Important**: Don't forget to add a newline character `\n` at the end of the printf string.
 
-Tutorial Code
--------------
+チュートリアル コード
+-------------------
 
 #include <stdio.h>
 
@@ -121,15 +121,15 @@ int main() {
     guessNumber(555);
 }
 
-Expected Output
+期待している出力
 ---------------
 
 Your guess is too low.
 Your guess is too high.
 Correct. You guessed it!
 
-Solution
---------
+解答
+----
 
 #include <stdio.h>
 

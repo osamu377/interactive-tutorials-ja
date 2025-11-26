@@ -1,5 +1,5 @@
-Tutorial
---------
+チュートリアル
+-------------
 
 C Unions are essentially the same as C Structures, except that instead of containing multiple variables each with their own memory a Union allows for multiple names to the same variable. These names can treat the memory as different types (and the size of the union will be the size of the largest type, + any padding the compiler might decide to give it)
 
@@ -100,13 +100,13 @@ since the union makes the variables share the same memory the coins array matche
         change.quarter, change.dime, change.nickel, change.penny);
 
 
-Exercise
---------
+演習
+----
 
 Create a union that stores an array of 21 characters and 6 ints (6 since 21 / 4 == 5, but 5 * 4 == 20 so you need 1 more for the purpose of this exercise), you will set the integers to 6 given values and then print out the character array both as a series of chars and as a string.
 
-Tutorial Code
--------------
+チュートリアル コード
+-------------------
 
     #include <stdio.h>
   
@@ -128,14 +128,14 @@ Tutorial Code
         printf("%s\n", intCharacters.chars);
     }
 
-Expected Output
+期待している出力
 ---------------
 
     [I,  , u, n, d, e, r, s, t, a, n, d,  , U, n, i, o, n, s, !]
     I understand Unions!
 
-Solution
---------
+解答
+----
 
     #include <stdio.h>
   

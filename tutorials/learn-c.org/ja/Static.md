@@ -1,5 +1,5 @@
-Tutorial
---------
+チュートリアル
+-------------
 `static` is a keyword in the C programming language. It can be used with variables and functions.
 
 ### What is a static variable?
@@ -50,12 +50,12 @@ The syntax looks like this:
 ### Static vs Global?
 While static variables have scope over the file containing them making them accessible only inside a given file, global variables can be accessed outside the file too.
 
-Exercise
---------
+演習
+----
 In this exercise, try to find the sum of some numbers by using the static keyword.  Do not pass any variable representing the running total to the `sum()` function.
 
-Tutorial Code
--------------
+チュートリアル コード
+-------------------
 
    #include <stdio.h>
    int sum (int num) {
@@ -71,13 +71,13 @@ Tutorial Code
        return 0;
    }
 
-Expected Output
+期待している出力
 ---------------
 
    55 100 150
 
-Solution
---------
+解答
+----
 
    #include <stdio.h>
    int sum (int num) {

@@ -1,5 +1,5 @@
-Tutorial
---------
+チュートリアル
+-------------
 
 ### Introduction
 
@@ -237,14 +237,14 @@ There are a few edge cases we need to take care of, so make sure you understand 
     }
 
 
-Exercise
---------
+演習
+----
 
 You must implement the function `remove_by_value` which receives a double pointer to the head and removes the first
 item in the list which has the value `val`.
 
-Tutorial Code
--------------
+チュートリアル コード
+-------------------
 
     #include <stdio.h>
     #include <stdlib.h>
@@ -300,15 +300,15 @@ Tutorial Code
         print_list(test_list);
     }
 
-Expected Output
+期待している出力
 ---------------
 
     1
     2
     4
 
-Solution
---------
+解答
+----
 
     #include <stdio.h>
     #include <stdlib.h>

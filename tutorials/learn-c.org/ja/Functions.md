@@ -1,5 +1,5 @@
-Tutorial
---------
+チュートリアル
+-------------
 
 C functions are simple, but because of how C works, the power of functions is a bit limited.
 
@@ -53,16 +53,16 @@ We can also create functions that do not return a value by using the keyword `vo
         moo();
     }
 
-Exercise
---------
+演習
+----
 
 Write a function called `print_big` which receives one argument (an integer) and prints the line `x is big` (where x is the argument) if the argument given
 to the function is a number bigger than 10. 
 
 * **Important**: Don't forget to add a newline character `\n` at the end of the printf string.
 
-Tutorial Code
--------------
+チュートリアル コード
+-------------------
 
     #include <stdio.h>
 
@@ -80,15 +80,15 @@ Tutorial Code
 
     /* write your function here */
 
-Expected Output
+期待している出力
 ---------------
 
     11 is big
     22 is big
     33 is big
 
-Solution
---------
+解答
+----
 
     #include <stdio.h>
 
