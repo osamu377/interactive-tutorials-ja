@@ -1,18 +1,18 @@
 チュートリアル
 -------------
 
-C functions are simple, but because of how C works, the power of functions is a bit limited.
+C関数はシンプルですが、C言語の仕組み上、その威力には多少の限界があります。
 
-* Functions receive either a fixed or variable amount of arguments.
-* Functions can only return one value, or return no value.
+* 関数は、固定数または可変数の引数を受け取ります。
+* 関数は1つの値のみを返すか、値を返さないかのいずれかです。
 
-In C, arguments are copied by value to functions, which means that we cannot change the arguments to affect their value outside of
-the function. To do that, we must use pointers, which are taught later on.
+C言語では、引数は関数に値としてコピーされます。つまり、関数外で引数の値を変更して変更することはできません。
+そのためには、後ほど説明するポインタを使用する必要があります。
 
-Functions are defined using the following syntax:
+関数は以下の構文で定義されます。
 
     int foo(int bar) {
-        /* do something */
+        /* 何かをする */
         return bar * 2;
     }
 
@@ -20,22 +20,21 @@ Functions are defined using the following syntax:
         foo(1);
     }
 
-The function `foo` we defined receives one argument, which is `bar`. The function receives an integer, multiplies it by two, and returns the result. 
+定義した関数 `foo` は、`bar` という1つの引数を受け取ります。受け取った整数をを2倍して結果を返します。
 
-To execute the function `foo` with 1 as the argument `bar`, we use the following syntax:
+引数 `bar` に1を指定して関数 `foo` を実行するには、次の構文を使用します。
 
     foo(1);
 
-In C, functions must be first defined before they are used in the code. They can be either declared first and then implemented later on using a 
-header file or in the beginning of the C file, or they can be implemented in the order they are used (less preferable).
+C言語では、関数はコード内で使用される前に定義される必要があります。関数は最初に宣言し、後でヘッダーファイルやC言語ファイルの先頭で実装します。また、使用される順序で実装することもできます（こちらはあまり推奨されません）。
 
-The correct way to use functions is as follows:
+関数の正しい使用方法は次のとおりです。
 
-    /* function declaration */
+    /* 関数宣言 */
     int foo(int bar);
 
     int main() {
-        /* calling foo from main */
+        /* main から foo を呼ぶ */
         printf("The value of foo is %d", foo(1));
     }
 
@@ -43,10 +42,10 @@ The correct way to use functions is as follows:
         return bar + 1;
     }
 
-We can also create functions that do not return a value by using the keyword `void`:
+キーワード `void` を使用して、値を返さない関数を作成することもできます。
 
     void moo() {
-        /* do something and don't return a value */
+        /* 何かを実行するが、値を返さない */
     }
 
     int main() {
@@ -56,17 +55,16 @@ We can also create functions that do not return a value by using the keyword `vo
 演習
 ----
 
-Write a function called `print_big` which receives one argument (an integer) and prints the line `x is big` (where x is the argument) if the argument given
-to the function is a number bigger than 10. 
+`print_big` という関数を作成してください。この関数は、引数（整数）を1つ受け取り、引数が10より大きい数値の場合に `x is big`（x は引数）という行を出力します。
 
-* **Important**: Don't forget to add a newline character `\n` at the end of the printf string.
+* **重要**: printf 文字列の末尾に改行文字 `\n` を追加することを忘れないでください。
 
 チュートリアル コード
 -------------------
 
     #include <stdio.h>
 
-    /* function declaration */
+    /* 関数宣言 */
     void print_big(int number);
 
     int main() {
@@ -78,7 +76,7 @@ to the function is a number bigger than 10.
       return 0;
     }
 
-    /* write your function here */
+    /* あなたの関数をここに書く */
 
 期待している出力
 ---------------
@@ -92,7 +90,7 @@ to the function is a number bigger than 10.
 
     #include <stdio.h>
 
-    /* function declaration */
+    /* 関数宣言 */
     void print_big(int number);
 
     int main() {

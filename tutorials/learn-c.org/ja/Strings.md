@@ -1,53 +1,50 @@
 チュートリアル
 -------------
 
-### Defining strings
+### 文字列の定義
 
-Strings in C are actually arrays of characters. Although using pointers in C is an advanced subject, fully explained later on, we will use pointers to a character array to define simple strings, in the following manner:
+C言語における文字列は、実際には文字の配列です。C言語におけるポインタの使用は高度なテーマであり、後ほど詳しく説明しますが、ここでは文字配列へのポインタを使用して、単純な文字列を定義します。その方法は以下のとおりです。
 
     char * name = "John Smith";
 
-This method creates a string which we can only use for reading. 
-If we wish to define a string which can be manipulated, we will need to define it as a local character array:
+このメソッドは、読み取り専用の文字列を作成します。
+操作可能な文字列を定義したい場合は、ローカル文字配列として定義する必要があります。
 
     char name[] = "John Smith";
 
-This notation is different because it allocates an array variable so we can manipulate it. The empty brackets notation `[]` tells the
-compiler to calculate the size of the array automatically. This is in fact the same as allocating it explicitly, adding one to 
-the length of the string:
+この表記法は、配列変数を割り当てて操作できるようにするという点で異なります。空の括弧表記 `[]` は、コンパイラに配列のサイズを自動的に計算するように指示します。これは実際には、明示的に割り当てて文字列の長さに1を加算するのと同じです。
 
     char name[] = "John Smith";
     /* is the same as */
     char name[11] = "John Smith";
 
-The reason that we need to add one, although the string `John Smith` is exactly 10 characters long, is for the string termination:
-a special character (equal to 0) which indicates the end of the string. The end of the string is marked because the program
-does not know the length of the string - only the compiler knows it according to the code.
+文字列「John Smith」の長さはちょうど10文字ですが、1文字追加する必要があるのは、文字列の終端を示すためです。
+文字列の終端を示す特殊文字（0に等しい）です。文字列の終端を示すのは、プログラムが文字列の長さを把握していないためです。
+コードから判断して、コンパイラのみが文字列の長さを把握します。
 
-### String formatting with printf
+### printfによる文字列のフォーマット
 
-We can use the `printf` command to format a string together with other strings, in the following manner:
+次のように、`printf` コマンドを使用して文字列を他の文字列と一緒にフォーマットすることができます。
 
     char * name = "John Smith";
     int age = 27;
 
-    /* prints out 'John Smith is 27 years old.' */
+    /* 'John Smith は 27 歳です。' と出力します。 */
     printf("%s is %d years old.\n", name, age);
 
-Notice that when printing strings, we must add a newline (`\n`) character so that our next `printf` statement will print in a new line.
+文字列を印刷するとき、次の `printf` ステートメントが新しい行に印刷されるように、改行文字 (`\n`) を追加する必要があることに注意してください。
 
-### String Length
+### 文字列の長さ
 
-The function 'strlen' returns the length of the string which has to be passed as an argument:
+関数 'strlen' は、引数として渡す必要のある文字列の長さを返します。
 
     char * name = "Nikhil";
     printf("%d\n",strlen(name));        
 
-### String comparison
+### 文字列の比較
 
-The function `strncmp` compares between two strings, returning the number 0 if they are equal, or a different number if they are different.
-The arguments are the two strings to be compared, and the maximum comparison length. There is also an unsafe version of this function
-called `strcmp`, but it is not recommended to use it. For example:
+関数 `strncmp` は2つの文字列を比較し、等しい場合は数値 0 を、異なる場合は異なる数値を返します。
+引数は、比較する2つの文字列と比較する文字列の最大長です。この関数には安全でないバージョンである `strcmp` も存在しますが、使用は推奨されません。例:
 
     char * name = "John";
 
@@ -57,10 +54,10 @@ called `strcmp`, but it is not recommended to use it. For example:
         printf("You are not John. Go away.\n");
     }
 
-### String Concatenation
+### 文字列の連結
 
-The function 'strncat' appends first n characters of src string to the destination string where n is min(n,length(src));
-The arguments passed are destination string, source string, and n - maximum number of characters to be appended. For Example:
+関数 'strncat' は、src 文字列の最初の n 文字を destination 文字列に追加します。ここで n は min(n,length(src)) です。
+渡される引数は、 destination 文字列、source 文字列、および n です。n は追加する最大文字数です。例:
 
     char dest[20]="Hello";
     char src[20]="World";
@@ -72,8 +69,7 @@ The arguments passed are destination string, source string, and n - maximum numb
 演習
 ----
 
-Define the string `first_name` with the value `John` using the pointer notation, and define the string `last_name` with the value `Doe`
-using the local array notation.
+ポインタ表記法を使用して、文字列 `first_name` を値 `John` で定義し、ローカル配列表記法を使用して、文字列 `last_name` を値 `Doe` で定義します。
 
 チュートリアル コード
 -------------------
@@ -81,8 +77,8 @@ using the local array notation.
     #include <stdio.h>
     #include <string.h>
     int main() {
-      /* define first_name */
-      /* define last_name */
+      /* first_name を定義 */
+      /* last_name を定義 */
       char name[100];
 
       last_name[0] = 'B';

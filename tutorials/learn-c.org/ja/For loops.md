@@ -1,16 +1,16 @@
 チュートリアル
 -------------
 
-For loops in C are straightforward. They supply the ability to create a loop - a code block that runs multiple times. 
-For loops require an iterator variable, usually notated as `i`.
+C言語のforループはシンプルです。ループとは、複数回実行されるコードブロックのことです。
+forループには、通常「i」と表記されるイテレータ変数が必要です。
 
-For loops give the following functionality:
+forループには以下の機能があります。
 
-* Initialize the iterator variable using an initial value
-* Check if the iterator has reached its final value
-* Increases the iterator
+* 初期値を使用してイテレータ変数を初期化する
+* イテレータが最終値に達したかどうかを確認する
+* イテレータの値を増やす
 
-For example, if we wish to iterate on a block for 10 times, we write:
+例えば、あるブロックを10回繰り返し処理したい場合は、次のように記述します。
 
     int i;
     for (i = 0; i < 10; i++) {
@@ -22,6 +22,11 @@ This block will print the numbers 0 through 9 (10 numbers in total).
 For loops can iterate on array values. For example, if we would want to sum all the values of an array, we would use
 the iterator `i` as the array index:
 
+このブロックは0から9までの数字（合計10個）を出力します。
+
+forループは配列の値を、繰り返し処理できます。例えば、配列のすべての値を合計したい場合は、
+イテレータ「i」を配列のインデックスとして使用します。
+
     int array[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     int sum = 0;
     int i;
@@ -30,13 +35,13 @@ the iterator `i` as the array index:
         sum += array[i];
     }
 
-    /* sum now contains a[0] + a[1] + ... + a[9] */
+    /* 合計には a[0] + a[1] + ... + a[9] が含まれます */
     printf("Sum of the array is %d\n", sum);
 
 演習
 ----
 
-Calculate the factorial (multiplication of all items `array[0]` to `array[9]`, inclusive), of the variable `array`.
+変数 `array` の階乗（`array[0]` から `array[9]` までのすべての項目の乗算）を計算します。
 
 チュートリアル コード
 -------------------
@@ -48,7 +53,7 @@ Calculate the factorial (multiplication of all items `array[0]` to `array[9]`, i
       int factorial = 1;
       int i;
 
-      /* calculate the factorial using a for loop  here*/
+      /* ここでforループを使用して階乗を計算します*/
 
       printf("10! is %d.\n", factorial);
     }

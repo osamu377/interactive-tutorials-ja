@@ -1,25 +1,24 @@
 チュートリアル
 -------------
 
-While loops are similar to for loops, but have less functionality. A while loop continues executing the while block as long as the
-condition in the while remains true. For example, the following code will execute exactly ten times:
+whileループはforループに似ていますが、機能は少なくなっています。whileループは、while内の条件が真である限り、whileブロックの実行を継続します。例えば、次のコードはちょうど10回実行されます。
 
     int n = 0;
     while (n < 10) {
         n++;
     }
 
-While loops can also execute infinitely if a condition is given which always evaluates as true (non-zero):
+常に true (ゼロ以外) と評価される条件が指定されている場合、while ループは無限に実行することもできます。
 
     while (1) {
        /* do something */
     }
 
-### Loop directives
+### ループ命令文
 
-There are two important loop directives that are used in conjunction with all loop types in C - the `break` and `continue` directives.
+C言語には、あらゆるループタイプで併用される重要なループ命令文が2つあります。それは`break` 命令文と`continue` 命令文です。
 
-The `break` directive halts a loop after ten loops, even though the while loop never finishes:
+下の「break」命令文は、whileループが終了しない場合でも、ループを10回実行した後に停止します。
 
     int n = 0;
     while (1) {
@@ -29,32 +28,32 @@ The `break` directive halts a loop after ten loops, even though the while loop n
         }
     }
 
-In the following code, the `continue` directive causes the `printf` command to be skipped, so that only even numbers are printed out:
+次のコードでは、`continue` 命令文によって `printf` コマンドがスキップされ、偶数のみが出力されます。
 
     int n = 0;
     while (n < 10) {
         n++;
 
-        /* check that n is odd */
+        /* nが奇数であることを確認する */
         if (n % 2 == 1) {
-            /* go back to the start of the while block */
+            /* whileブロックの先頭に戻る */
             continue;
         }
 
-        /* we reach this code only if n is even */
+        /* nが偶数の場合にのみこのコードに到達する */
         printf("The number %d is even.\n", n);
     }
 
 演習
 ----
 
-The `array` variable consists of a sequence of ten numbers. Inside the while loop, you must write two `if` conditions, 
-which change the flow of the loop in the following manner (without changing the `printf` command):
+`array` 変数は 10 個の数値のシーケンスで構成されています。while ループ内に 2 つの `if` 条件を記述する必要があります。
+これらの条件は、ループの流れを以下のように変更します（`printf` コマンドは変更しません）。
 
-* If the current number which is about to printed is less than 5, don't print it.
-* If the current number which is about to printed is greater than 10, don't print it and stop the loop.
+* 現在出力しようとしている数値が 5 未満の場合、出力しません。
+* 現在出力しようとしている数値が 10 より大きい場合、出力せずにループを停止します。
 
-Notice that if you do not advance the iterator variable `i` and use the `continue` derivative, you will get stuck in an infinite loop.
+反復変数 `i` を進めずに `continue` 導関数を使用しないと、無限ループに陥ることに注意してください。
 
 チュートリアル コード
 -------------------
@@ -66,7 +65,7 @@ Notice that if you do not advance the iterator variable `i` and use the `continu
         int i = 0;
 
         while (i < 10) {
-            /* your code goes here */
+            /* ここにコードを記述します */
 
             printf("%d\n", array[i]);
             i++;

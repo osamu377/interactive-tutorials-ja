@@ -1,12 +1,11 @@
 チュートリアル
 -------------
 
-### Decision Making
+### 決断を下す
 
-In life, we all have to make decisions. In order to make a decision we weigh out our options and so do our programs.
+人生において、私たちは皆、決断を下さなければなりません。決断を下すために、私たちは選択肢を検討し、計画も練り上げます。
 
-Here is the general form of the decision making structures found in C.
-
+以下は、C 言語に見られる『決断を下す』構造の一般的な形式です。
 
     int target = 10;
     if (target == 10) {
@@ -14,13 +13,13 @@ Here is the general form of the decision making structures found in C.
     }
 
 
-### The `if` statement
+### `if`文
 
-The `if` statement allows us to check if an expression is `true` or `false`, and execute different code according to the result.
+`if` 文を使うと、式が `true` か `false` かを確認し、結果に応じて異なるコードを実行できます。
 
-To evaluate whether two variables are equal, the `==` operator is used, just like in the first example.
+2つの変数が等しいかどうかを評価するには、最初の例のように `==` 演算子を使用します。
 
-Inequality operators can also be used to evaluate expressions. For example:
+不等号演算子も式の評価に使用できます。例:
 
     int foo = 1;
     int bar = 2;
@@ -33,7 +32,7 @@ Inequality operators can also be used to evaluate expressions. For example:
         printf("foo is greater than bar.");
     }
 
-We can use the `else` keyword to execute code when our expression evaluates to `false`.
+式が `false` と評価された場合にコードを実行するには、 `else` キーワードを使用できます。
 
     int foo = 1;
     int bar = 2;
@@ -44,7 +43,7 @@ We can use the `else` keyword to execute code when our expression evaluates to `
         printf("foo is greater than bar.");
     }
 
-Sometimes we will have more than two outcomes to choose from. In these cases, we can "chain" multiple `if` `else` statements together.
+場合によっては、2つ以上の結果から選択する必要があります。このような場合は、複数の `if` `else` 文を「連結」することができます。
 
     int foo = 1;
     int bar = 2;
@@ -57,7 +56,7 @@ Sometimes we will have more than two outcomes to choose from. In these cases, we
         printf("foo is greater than bar.");
     }
 
-You can also nest `if` `else` statements if you like.
+必要に応じて、`if` `else` ステートメントをネストすることもできます。
 
     int peanuts_eaten = 22;
     int peanuts_in_jar = 100;
@@ -77,7 +76,7 @@ You can also nest `if` `else` statements if you like.
     }
 
 
-Two or more expressions can be evaluated together using logical operators to check if two expressions evaluate to `true` together, or at least one of them. To check if two expressions both evaluate to `true`, use the AND operator `&&`. To check if at least one of the expressions evaluate to `true`, use the OR operator `||`.
+論理演算子を使用して2つ以上の式をまとめて評価することで、『2つの式が両方とも「true」と評価されるか』『または少なくともどちらか一方が「true」と評価されるか』を確認できます。2つの式が両方とも「true」と評価されるかどうかを確認するには、AND演算子「&&」を使用します。少なくとも一方の式が「true」と評価されるかどうかを確認するには、OR演算子「||」をを使用します。
 
     int foo = 1;
     int bar = 2;
@@ -93,6 +92,8 @@ Two or more expressions can be evaluated together using logical operators to che
 
 The NOT operator `!` can also be used likewise:
 
+NOT 演算子 `!` も同様に使用できます。
+
     int target = 9;
     if (target != 10) {
         printf("Target is not equal to 10");
@@ -102,50 +103,50 @@ The NOT operator `!` can also be used likewise:
 演習
 ----
 
-In this exercise, you must construct an `if` statement inside the `guessNumber` function statement that checks if the number `guess` is equal to 555. If that is the case, the function must print out using `printf` "Correct. You guessed it!". If `guess` is less than 555, the function must print out using `printf` "Your guess is too low." If `guess` is greater than 555, the function must print out using `printf` "Your guess is too high."
+この演習では、`guessNumber` 関数ステートメント内に、数値 `guess` が 555 に等しいかどうかを確認する `if` ステートメントを作成する必要があります。等しい場合、関数は `printf` を使用して「正解です。お察しの通りです！」と出力する必要があります。`guess` が 555 未満の場合、関数は `printf` を使用して「あなたの推測は低すぎます。」と出力する必要があります。`guess` が 555 より大きい場合、関数は `printf` を使用して「あなたの推測は高すぎます。」と出力する必要があります。
 
-* **Important**: Don't forget to add a newline character `\n` at the end of the printf string.
+* **重要**: printf 文字列の最後に改行文字 `\n` を追加することを忘れないでください。
 
 チュートリアル コード
 -------------------
 
-#include <stdio.h>
+    #include <stdio.h>
 
-void guessNumber(int guess) {
-    // TODO: write your code here
-}
+    void guessNumber(int guess) {
+        // TODO: ここにコードを記述してください
+    }
 
-int main() {
-    guessNumber(500);
-    guessNumber(600);
-    guessNumber(555);
-}
+    int main() {
+        guessNumber(500);
+        guessNumber(600);
+        guessNumber(555);
+    }
 
 期待している出力
 ---------------
 
-Your guess is too low.
-Your guess is too high.
-Correct. You guessed it!
+    Your guess is too low.
+    Your guess is too high.
+    Correct. You guessed it!
 
 解答
 ----
 
-#include <stdio.h>
+    #include <stdio.h>
 
-void guessNumber(int guess) {
-    // TODO: write your code here
-    if (guess < 555) {
-        printf("Your guess is too low.\n");
-    } else if (guess > 555) {
-        printf("Your guess is too high.\n");
-    } else {
-        printf("Correct. You guessed it!\n");
+    void guessNumber(int guess) {
+        // TODO: ここにコードを記述してください
+        if (guess < 555) {
+            printf("Your guess is too low.\n");
+        } else if (guess > 555) {
+            printf("Your guess is too high.\n");
+        } else {
+            printf("Correct. You guessed it!\n");
+        }
     }
-}
 
-int main() {
-    guessNumber(500);
-    guessNumber(600);
-    guessNumber(555);
-}
+    int main() {
+        guessNumber(500);
+        guessNumber(600);
+        guessNumber(555);
+    }

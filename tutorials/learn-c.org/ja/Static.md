@@ -1,11 +1,15 @@
 チュートリアル
 -------------
-`static` is a keyword in the C programming language. It can be used with variables and functions.
 
-### What is a static variable?
-By default, variables are local to the scope in which they are defined. Variables can be declared as static to increase their scope up to file containing them. As a result, these variables can be accessed anywhere inside a file.
+`static` はCプログラミング言語のキーワードです。変数や関数で使用できます。
 
-Consider the following scenario – where we want to count the runners participating in a race:
+しかし、同じ`static`でも、変数と関数で、まったく効果が異なる点は、注意が必要です。
+
+### static変数とは？
+
+変数はデフォルトではローカル変数で、それが定義されたスコープ内でのみ有効です。しかし、変数をstatic変数として宣言することで、その変数を含むファイル全体にスコープを拡張できます。その結果、これらの変数はファイル内のどこからでもアクセスできるようになります。
+
+レースに参加するランナーの数をカウントしたいという次のシナリオを考えてみましょう。
 
     #include<stdio.h>
     int runner() {
@@ -21,7 +25,7 @@ Consider the following scenario – where we want to count the runners participa
         return 0;
     }
 
-We will see that `count` is not updated because it is removed from memory as soon as the function completes.  If `static` is used however, we get the desired result:
+`count` は関数の完了と同時にメモリから削除されるので、継続してカウントアップされることはありません。しかし、`static` を使用すると、期待通りの結果が得られます。
 
     #include<stdio.h>
     int runner()
@@ -38,21 +42,24 @@ We will see that `count` is not updated because it is removed from memory as soo
         return 0;
     }
 
-### What is a static function?
-By default, functions are global in C.  If we declare a function with `static`, the scope of that function is reduced to the file containing it.
+### static関数とは？
 
-The syntax looks like this:
+C言語では、関数はデフォルトでグローバルです。しかし、`static` を使って関数を宣言すると、その関数のスコープはその関数を含むファイル内に縮小されます。
+
+構文は次のようになります。
 
     static void fun(void) {
        printf("I am a static function.");
     }
 
-### Static vs Global?
-While static variables have scope over the file containing them making them accessible only inside a given file, global variables can be accessed outside the file too.
+### static変数とグローバル変数の違い
+
+static変数は、その変数を含むファイル内でのみアクセス可能なため、特定のファイル内でのみアクセス可能です。一方、グローバル変数はファイル外からもアクセスできます。
 
 演習
 ----
-In this exercise, try to find the sum of some numbers by using the static keyword.  Do not pass any variable representing the running total to the `sum()` function.
+
+この演習では、staticキーワードを使っていくつかの数値の合計を計算してみましょう。`sum()`関数には、累計を表す変数を渡さないでください。
 
 チュートリアル コード
 -------------------
@@ -60,7 +67,7 @@ In this exercise, try to find the sum of some numbers by using the static keywor
    #include <stdio.h>
    int sum (int num) {
        /**
-       * find sum to n numbers
+       * * n 個の数値の合計を求める
        */
    }
 
