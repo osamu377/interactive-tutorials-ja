@@ -28,51 +28,49 @@
 
 この行は3つの処理を行います。
 
-1. `name` というローカル（スタック）変数を割り当てます。これは1文字へのポインタです。
+1. `name` というローカル（スタック）変数をメモリに割り当てます。メモリアドレスを格納する箱となるもので、1文字へのポインタとなります。
 2. 文字列 "John" をプログラムメモリのどこかに出現させます（もちろん、コンパイルおよび実行後）。
-3. `name` 引数を初期化し、`J` 文字の位置（メモリ内の文字列の残りの部分がそれに続きます）を指します。
+3. `name` 引数を初期化し、`J` 文字のアドレスを格納します。メモリ内の文字列の残りの部分がそれに続きます。
 
 `name` 変数に配列としてアクセスしようとすると、それはうまくいって、文字 `J` のASCIIコード値を返します。これは、`name` 変数が実際には文字列の先頭を正確に指しているためです。
 
 メモリは連続的であることがわかっているため、メモリ内で次の文字に進むと、文字列の末尾 (ASCIIコード値が 0 の文字、`\0` と表記) に達するまで、文字列内の次の文字を受け取ると想定できます。
 
-### Dereferencing
+### デリファレンス（逆参照）
 
-Dereferencing is the act of referring to where the pointer points, instead of the memory address. We are already using dereferencing in arrays - but we just didn't know it yet. The brackets operator - `[0]` for example, accesses the first item of the array. And since arrays are actually pointers, accessing the first item in the array is the same as dereferencing a pointer. Dereferencing a pointer is done using the asterisk operator `*`.
+デリファレンスとは、メモリアドレスを参照する代わりに、ポインタが指している場所に格納されている値を参照する動作です。実はもう、配列でデリファレンスを使用していたのですが、あのときはまだ、そのことを知らなかったのです。例えば、添字演算子 `[0]` は配列の最初の要素にアクセスします。配列は実際にはポインタなので、配列の最初の要素にアクセスすることは、すなわちポインタをデリファレンスすることと、同じ動作になります。ポインタをデリファレンスするには、アスタリスク演算子 `*` を使用します。
 
-デリファレンスとは、メモリアドレスではなく、ポインタが指している場所を参照する動作です。配列では既にデリファレンスを使用していますが、今回はそのことを知らなかっただけです。例えば、括弧演算子 `[0]` は配列の最初の項目にアクセスします。配列は実際にはポインタなので、配列の最初の項目にアクセスすることはポインタをデリファレンスすることと同じです。ポインタをデリファレンスするには、アスタリスク演算子 `*` を使用します。
+スタック内の別の変数を指す配列を作成する場合は、次のコードを記述します。
 
-If we want to create an array that will point to a different variable in our stack, we can write the following code:
-
-    /* define a local variable a */
+    /* ローカル変数 a を定義する */
     int a = 1;
 
-    /* define a pointer variable, and point it to a using the & operator */
+    /* ポインタ変数を定義し、&演算子を使用して、aを指す */
     int * pointer_to_a = &a;
 
     printf("The value a is %d\n", a);
     printf("The value of a is also %d\n", *pointer_to_a);
 
-Notice that we used the `&` operator to point at the variable `a`, which we have just created.
+先ほど作成した変数 `a` のアドレスを得るために `&` 演算子を使用していることに注意してください。
 
-We then referred to it using the dereferencing operator. We can also change the contents of the dereferenced variable:
+次に、アスタリスク演算子を使って、アドレスから逆に、そこに格納されている値を参照しました。値を読むだけでなく、逆参照（デリファレンス）した変数の内容を変更することもできます。
 
     int a = 1;
     int * pointer_to_a = &a;
 
-    /* let's change the variable a */
+    /* 変数 a を変更してみましょう */
     a += 1;
 
-    /* we just changed the variable again! */
+    /* 変数をもう一度変更しました！ */
     *pointer_to_a += 1;
 
-    /* will print out 3 */
+    /* 3 と表示されます */
     printf("The value of a is now %d\n", a);
 
 演習
 ----
 
-Create a pointer to the local variable `n` called `pointer_to_n`, and use it to increase the value of `n` by one.
+`pointer_to_n` というローカル変数 `n` へのポインタを作成し、それを使用して `n` の値を 1 増やします。
 
 チュートリアル コード
 -------------------
