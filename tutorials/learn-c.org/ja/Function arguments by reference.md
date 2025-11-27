@@ -1,14 +1,14 @@
 チュートリアル
 -------------
 
-Assuming you now understand pointers and functions, you are aware that function arguments are passed by value, by which means they are copied in and out of functions.
-But what if we pass pointers to values instead of the values themselves? This will allow us to give functions control over the variables and structures of the parent functions and not just a copy of them, thus directly reading and writing the original object.
+ポインタと関数について理解した上で、関数の引数は値渡し、つまり関数間でコピーされて渡されることをご存知でしょう。
+しかし、値そのものではなく、値へのポインタを渡したらどうなるでしょうか？ こうすることで、関数は親関数の変数や構造体をコピーではなく制御できるようになり、元のオブジェクトを直接読み書きできるようになります。
 
-Let's say we want to write a function which increments a number by one, called `addone`. This will not work:
+例えば、`addone` という、数値を1ずつ増やす関数を記述するとします。これはうまくいきません。
 
     void addone(int n) {
-        // n is local variable which only exists within the function scope
-        n++; // therefore incrementing it has no effect
+        // nは関数スコープ内にのみ存在するローカル変数です
+        n++; // そのため、nを増やしても、関数の外からは影響を与えません
     }
 
     int n;
@@ -16,11 +16,11 @@ Let's say we want to write a function which increments a number by one, called `
     addone(n);
     printf("After: %d\n", n);
 
-However, this will work:
+しかし、これはうまくいきます。
 
     void addone(int *n) {
-        // n is a pointer here which point to a memory-adress outside the function scope
-        (*n)++; // this will effectively increment the value of n
+        // nは関数スコープ外のメモリアドレスを指すポインタです
+        (*n)++; // これにより、nの値が実質的に増加します。
     }
 
     int n;
@@ -28,20 +28,20 @@ However, this will work:
     addone(&n);
     printf("After: %d\n", n);
 
-The difference is that the second version of `addone` receives a pointer to the variable `n` as an argument, and then it can manipulate it, because it knows where it is in the memory.
+違いは、`addone` の 2 番目のバージョンは変数 `n` へのポインタを引数として受け取り、それがメモリ内のどこにあるかを知っているため、それを操作できるという点です。
 
-Notice that when calling the `addone` function, we **must** pass a reference to the variable `n`, and not the variable itself - this is done so that the function knows the address of the variable, and won't just receive a copy of the variable itself.
+`addone` 関数を呼び出す際は、変数 `n` 自体ではなく、変数への参照を渡す必要があることに注意してください。これは、関数が変数のアドレスを認識し、変数のコピーを受け取らないようにするためです。
 
-### Pointers to structures
+### 構造体へのポインタ
 
-Let's say we want to create a function which moves a point forward in both `x` and `y` directions, called `move`. Instead of sending two pointers, we can now send only one pointer to the function of the point structure:
+点を `x` 方向と `y` 方向の両方に移動する、`move` という関数を作成するとします。2つのポインタを引数として渡す代わりに、点構造体の関数へのポインタを1つだけ渡すことができます。
 
     void move(point * p) {
         (*p).x++;
         (*p).y++;
     }
 
-However, if we wish to dereference a structure and access one of it's internal members, we have a shorthand syntax for that, because this operation is widely used in data structures. We can rewrite this function using the following syntax:
+構造体を逆参照して内部メンバーにアクセスしたいときのために、簡略化された構文があります。それほど、この操作は構造体データで広く使用されているのです。この関数は、次の構文を使って書き換えることができます。
 
     void move(point * p) {
         p->x++;
@@ -51,7 +51,7 @@ However, if we wish to dereference a structure and access one of it's internal m
 演習
 ----
 
-Write a function called `birthday`, which adds one to the `age` of a `person`.
+`person`の`age`に1を加算する`birthday`という関数を書いてください。
 
 チュートリアル コード
 -------------------
@@ -63,10 +63,11 @@ Write a function called `birthday`, which adds one to the `age` of a `person`.
       int age;
     } person;
 
-    /* function declaration */
+    /* 関数宣言 */
+
     void birthday(person * p);
 
-    /* write your function here */
+    /* ここに関数を記述してください */
 
     int main() {
       person john;
@@ -96,7 +97,7 @@ Write a function called `birthday`, which adds one to the `age` of a `person`.
       int age;
     } person;
 
-    /* function declaration */
+    /* 関数宣言 */
     void birthday(person * p);
 
     void birthday(person * p){
