@@ -1,57 +1,57 @@
 チュートリアル
 -------------
 
-C structures are special, large variables which contain several named variables inside. Structures are the basic foundation for objects and classes in C. Structures are used for:
+C構造体は、内部に複数の名前付き変数を含む特別な大きな変数です。構造体は、構造体とクラスの基本的な基礎です。構造体は以下の目的で使用されます。
 
-* Serialization of data
-* Passing multiple arguments in and out of functions through a single argument
-* Data structures such as linked lists, binary trees, and more
+* データのシリアライズ
+* 1つの引数を通じて関数の引数と出力
+* 関連リスト、二分木などのデータ構造
 
-The most basic example of structures are **points**, which are a single entity that contains two variables - `x` and `y`. Let's define a point:
+構造体の最も基本的な例は、**点**です。点は、xとyという2つの変数を含む単一のエンティティです。点を定義しましょう。
 
     struct point {
         int x;
         int y;
     };
 
-Now, let's define a new point, and use it. Assume the function `draw` receives a point and draws it on a screen. Without structs, using it would require two arguments - each for every coordinate:
+次に、新しい点を定義し、使用します。関数`draw`が点を受け取り、画面に点を描くと仮定します。構造体を使用せずに、使用するには、各座標用の2つの引数が必要です。
 
-    /* draws a point at 10, 5 */
+    /* 10, 5 の位置に点を描く */
     int x = 10;
     int y = 5;
     draw(x, y);
 
-Using structs, we can pass a point argument:
+構造体を使用して、点を引数として渡すことができます。
 
-    /* draws a point at 10, 5 */
+    /* 10, 5 の位置に点を描く */
     struct point p;
     p.x = 10;
     p.y = 5;
     draw(p);
 
-To access the point's variables, we use the dot `.` operator. 
+点の変数にアクセスするには、ドット`.`演算子を使用します。
 
 ### Typedefs
 
-Typedefs allow us to define types with a different name - which can come in handy when dealing with structs and pointers. In this case, we'd want to get rid of the long definition of a point structure. We can use the following syntax to remove the `struct` keyword from each time we want to define a new point:
+typedefを使用することで、型の別名を定義できます。これは構造体とポインタを扱う際に便利です。ここで私たちは、点構造体の長い定義をなんとかしたいと考えています。新しい点を定義するたびに、いちいち`struct`キーワードをつけなくても済むように、以下の構文を使用できます。
 
     typedef struct {
         int x;
         int y;
     } point;
 
-This will allow us to define a new point like this:
+これにより、新しい点を定義する際に、`struct`キーワードが不要になります。
 
     point p;
 
-Structures can also hold pointers - which allows them to hold strings, or pointers to other structures as well - which is their real power. For example, we can define a vehicle structure in the following manner:
+構造体は、ポインタを含むことができます。これにより、構造体は文字列を保持したり、他の構造体へのポインタを保持したりすることができます。つまり、これが構造体の本当の力です。例えば、以下の方法で乗り物構造体を定義できます。
 
     typedef struct {
         char * brand;
         int model;
     } vehicle;
 
-Since brand is a char pointer, the vehicle type can contain a string (which, in this case, indicates the brand of the vehicle).
+ブランドは文字列を保持したり、他の構造体へのポインタを保持したりすることができます。つまり、これが構造体の本当の力です。例えば、以下の方法で乗り物構造体を定義できます。
 
     vehicle mycar;
     mycar.brand = "Ford";
@@ -60,14 +60,14 @@ Since brand is a char pointer, the vehicle type can contain a string (which, in 
 演習
 ----
 
-Define a new data structure, named "person", which contains a string (pointer to char) called `name`, and an integer called `age`.
+新しい構造体を定義してください。構造体の名前は"person"で、`name`という名前の文字列（charへのポインタ）と、`age`という整数を含みます。
 
 チュートリアル コード
 -------------------
 
     #include <stdio.h>
 
-    /* define the person struct here using the typedef syntax */
+    /* typedef構文を使用してここでperson構造体を定義します */
 
     int main() {
         person john;
